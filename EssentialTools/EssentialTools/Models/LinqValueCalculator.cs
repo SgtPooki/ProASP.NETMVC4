@@ -15,7 +15,7 @@ namespace EssentialTools.Models
         }
         public decimal ValueProducts(IEnumerable<Product> products)
         {
-            return discounter.ApplyDiscount(products.Sum(p => p.Price));
+            return this.discounter.ApplyDiscount(products.Sum(p => p.Price));
         }
     }
 }
