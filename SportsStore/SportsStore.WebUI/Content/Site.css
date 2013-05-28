@@ -66,22 +66,37 @@ textarea {
 **************************************************/
 
 body { font-family: Cambria, Georgia, "Times New Roman"; margin: 0; }
-div#header div.title, div.item H3, div.item H4, div.pager A {
+div#header div.title, div.item h3, div.item h4, div.pager a {
 font: bold 1em "Arial Narrow", "Franklin Gothic Medium", Arial;
 }
 div#header { background-color: #444; border-bottom: 2px solid #111; color: White; }
 div#header div.title { font-size: 2em; padding: .6em; }
 div#content { border-left: 2px solid gray; margin-left: 9em; padding: 1em; }
-div#categories { float: left; width: 8em; padding: .3em; }
 
+/****************************
+    for items
+****************************/
 div.item { border-top: 1px dotted gray; padding-top: .7em; margin-bottom: .7em; }
 div.item:first-child { border-top:none; padding-top: 0; }
-div.item H3 { 
+div.item h3 { 
     font-size: 1.3em;
     margin: 0 0 .25em 0;
     text-transform: capitalize;
 }
-div.item H4 { font-size: 1.1em; margin:.4em 0 0 0; }
+div.item h4 { font-size: 1.1em; margin:.4em 0 0 0; }
+form {
+    margin: 0;
+    padding: 0;
+}
+div.item form {
+    float: right;
+}
+div.item input {
+    color: white;
+    background-color: #333;
+    border: 1px solid black;
+    cursor: pointer;
+}
 
 /**********************
   for pagination links
@@ -92,3 +107,43 @@ div.pagingLinks A { font-size: 1.1em; color: #666; text-decoration: none;
 padding: 0 .4em 0 .4em; }
 div.pagingLinks A:hover { background-color: Silver; }
 div.pagingLinks A.selected { background-color: #353535; color: White; }
+
+
+/*
+For navigation links    
+*/
+div#categories {
+    float: left;
+    width: 8em;
+    padding: .3em;
+}
+div#categories a
+{
+font: bold 1.1em "Arial Narrow","Franklin Gothic Medium",Arial; display: block;
+text-decoration: none; padding: .6em; color: Black;
+border-bottom: 1px solid silver;
+}
+div#categories a.selected { background-color: #666; color: White; }
+div#categories a:hover { background-color: #CCC; }
+div#categories a.selected:hover { background-color: #666; }
+
+
+/*********************
+    for the cart
+*********************/
+h2 {
+    margin-top: .3em;
+}
+tfoot td {
+    border-top: 1px dotted gray;
+    font-weight: bold;
+}
+.actionButtons a, input.actionButtons {
+    font: .8em Arial;
+    color: white;
+    margin: .5em;
+    text-decoration: none;
+    padding: .15em 1.5em .2em 1.5em;
+    background-color: #353535;
+    border: 1px solid black;
+}

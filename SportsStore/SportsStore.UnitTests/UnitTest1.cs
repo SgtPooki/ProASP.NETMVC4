@@ -21,11 +21,11 @@ namespace SportsStore.UnitTests
         {
             this.mockProductRepo.Setup(mockedObj => mockedObj.Products)
                 .Returns(new Product[] {
-                    new Product {ProductID = 1, Name = "P1"},
-                    new Product {ProductID = 2, Name = "P2"},
-                    new Product {ProductID = 3, Name = "P3"},
-                    new Product {ProductID = 4, Name = "P4"},
-                    new Product {ProductID = 5, Name = "P5"}
+                    new Product {ProductID = 1, Name = "P1", Category = "Cat1"},
+                    new Product {ProductID = 2, Name = "P2", Category = "Cat2"},
+                    new Product {ProductID = 3, Name = "P3", Category = "Cat1"},
+                    new Product {ProductID = 4, Name = "P4", Category = "Cat2"},
+                    new Product {ProductID = 5, Name = "P5", Category = "Cat3"}
                 }.AsQueryable());
         }
 
@@ -37,7 +37,7 @@ namespace SportsStore.UnitTests
             controller.productsPerPage = 3;
 
             //act
-            ProductsListViewModel result = (ProductsListViewModel)controller.List(2).Model;
+            ProductsListViewModel result = (ProductsListViewModel)controller.List(null, 2).Model;
 
             //assert
             Product[] prodArray = result.Products.ToArray();
@@ -78,7 +78,7 @@ namespace SportsStore.UnitTests
             controller.productsPerPage = 3;
 
             //act
-            ProductsListViewModel result = (ProductsListViewModel)controller.List(2).Model;
+            ProductsListViewModel result = (ProductsListViewModel)controller.List(null, 2).Model;
 
             //assert
             PagingInfo pageInfo = result.PagingInfo;
@@ -86,6 +86,72 @@ namespace SportsStore.UnitTests
             Assert.AreEqual(pageInfo.ItemsPerPage, 3);
             Assert.AreEqual(pageInfo.TotalItems, 5);
             Assert.AreEqual(pageInfo.TotalPages, 2);
+        }
+
+        [TestMethod]
+        public void canFilterProducts()
+        {
+            //arrange
+            ProductController controller = new ProductController(this.mockProductRepo.Object);
+            controller.productsPerPage = 3;
+
+            //action
+            Product[] result = ((ProductsListViewModel)controller.List("Cat2", 1).Model).Products.ToArray();
+
+            //assert
+            Assert.IsTrue(result.Length == 2);
+            Assert.IsTrue(result[0].Name == "P2" && result[0].Category == "Cat2");
+            Assert.IsTrue(result[1].Name == "P4" && result[1].Category == "Cat2");
+        }
+
+        [TestMethod]
+        public void CanCreateCategoriesPartialView()
+        {
+            //arrange
+            NavController target = new NavController(this.mockProductRepo.Object);
+
+            //act
+            string[] result = ((IEnumerable<string>)target.Menu().Model).ToArray();
+
+            //assert
+            Assert.AreEqual(result.Length, 3);
+            Assert.AreEqual(result[0], "Cat1");
+            Assert.AreEqual(result[1], "Cat2");
+            Assert.AreEqual(result[2], "Cat3");
+        }
+
+        [TestMethod]
+        public void CanKnowCurrentCategory()
+        {
+            //arrange
+            NavController target = new NavController(this.mockProductRepo.Object);
+            string categoryToSelect = "Cat2";
+
+            //action
+            string result = target.Menu(categoryToSelect).ViewBag.SelectedCategory;
+
+            //assert
+            Assert.AreEqual(categoryToSelect, result);
+        }
+
+        [TestMethod]
+        public void CanGenerateCategoryProductCount()
+        {
+            //arrange
+            ProductController controller = new ProductController(this.mockProductRepo.Object);
+            controller.productsPerPage = 3;
+
+            //act
+            int result1 = ((ProductsListViewModel)controller.List("Cat1").Model).PagingInfo.TotalItems;
+            int result2 = ((ProductsListViewModel)controller.List("Cat2").Model).PagingInfo.TotalItems;
+            int result3 = ((ProductsListViewModel)controller.List("Cat3").Model).PagingInfo.TotalItems;
+            int resultAll = ((ProductsListViewModel)controller.List(null).Model).PagingInfo.TotalItems;
+
+            //assert
+            Assert.AreEqual(result1, 2);
+            Assert.AreEqual(result2, 2);
+            Assert.AreEqual(result3, 1);
+            Assert.AreEqual(resultAll, 5);
         }
 
     }
