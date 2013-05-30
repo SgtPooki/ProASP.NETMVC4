@@ -7,8 +7,20 @@ using SportsStore.Domain.Entities;
 
 namespace SportsStore.Domain.Abstract
 {
+    /*
+    public class OrderProcessorStatus
+    {
+        public string statusText { get; set; }
+        public bool completed { get; set; }
+    }
+    */
+
     public interface IOrderProcessor
     {
-        void ProcessOrder(Cart cart, ShippingDetails shippingDetails);
+        string StatusText { get; set; }
+        bool IsDone { get; set; }
+        bool HaveToken { get; set; }
+
+        void ProcessOrder(Cart cart, ShippingDetails shippingDetails);        
     }
 }

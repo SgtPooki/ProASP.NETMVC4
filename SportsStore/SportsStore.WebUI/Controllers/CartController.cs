@@ -66,14 +66,18 @@ namespace SportsStore.WebUI.Controllers
 
             if (ModelState.IsValid)
             {
-                orderProcessor.ProcessOrder(cart, shippingDetails);
-                cart.Clear();
-                return View("Completed");
+                this.orderProcessor.ProcessOrder(cart, shippingDetails);
+                //if we process the order successfully, clear the cart and 
+                //if (this.orderProcessor.IsDone)
+                {
+                    cart.Clear();
+                    ViewBag.debugData = this.orderProcessor.StatusText;
+                    return View("Completed");
+                }
             }
-            else
-            {
-                return View(shippingDetails);
-            }
+
+            return View(shippingDetails);
+            
         }
 
         /* Not needed since we have the cartmodelbinder now.

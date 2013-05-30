@@ -1,0 +1,170 @@
+== Info: About to connect() to api.sandbox.paypal.com port 443 (#0)
+== Info:   Trying 173.0.82.78...
+== Info: 0x8001f128 is at send pipe head!
+== Info: STATE: CONNECT => WAITCONNECT handle 0x800575b8; line 1032 (connection #0) 
+== Info: Connected to api.sandbox.paypal.com (173.0.82.78) port 443 (#0)
+== Info: successfully set certificate verify locations:
+== Info:   CAfile: /usr/ssl/certs/ca-bundle.crt
+  CApath: none
+== Info: SSLv3, TLS handshake, Client hello (1):
+=> Send SSL data, 341 bytes (0x155)
+0000: ...Q..Q.s.8.=.b..W......G...9.._..K..Z....0.,.(.$.....".!.....k.
+0040: j.9.8.....2...*.&.......=.5...................../.+.'.#.........
+0080: ....g.@.3.2.....E.D.1.-.).%.......<./...A.......................
+00c0: ....................api.sandbox.paypal.com...........4.2........
+0100: .............................................". ................
+0140: .....................
+== Info: STATE: WAITCONNECT => PROTOCONNECT handle 0x800575b8; line 1145 (connection #0) 
+== Info: SSLv3, TLS handshake, Server hello (2):
+<= Recv SSL data, 81 bytes (0x51)
+0000: ...M.....C.L[<..TxE.F+3.e...y./.H.I... .=p..R.2O....-#.1......}.
+0040: .X/..j...........
+== Info: SSLv3, TLS handshake, CERT (11):
+<= Recv SSL data, 3608 bytes (0xe18)
+0000: ..........0...0...........:..(.0.D...k...0...*.H........0..1.0..
+0040: .U....US1.0...U....VeriSign, Inc.1.0...U....VeriSign Trust Netwo
+0080: rk1;09..U...2Terms of use at https://www.verisign.com/rpa (c)091
+00c0: /0-..U...&VeriSign Class 3 Secure Server CA - G20...120911000000
+0100: Z..130917235959Z0..1.0...U....US1.0...U....California1.0...U....
+0140: San Jose1.0...U....PayPal, Inc.1.0...U....PayPal Production1.0..
+0180: .U....api.sandbox.paypal.com0..0...*.H............0.........x.&.
+01c0: ^<..A....un..E.......*...v..=73.Wi07X[.3..._q.....s...B.4.M...9.
+0200: ...$I....yr9.'.:..3e5.L..b..l..We......wZ]U..../?....j..!.......
+0240: ..0...0!..U....0...api.sandbox.paypal.com0...U....0.0...U.......
+0280: ....0E..U...>0<0:.8.6.4http://SVRSecure-G2-crl.verisign.com/SVRS
+02c0: ecureG2.crl0C..U. .<0:08..`.H...E..60*0(..+.........https://www.
+0300: verisign.com/cps0...U.%..0...+.........+.......0...U.#..0.......
+0340: ..A..Je.H...W-}G0v..+........j0h0$..+.....0...http://ocsp.verisi
+0380: gn.com0@..+.....0..4http://SVRSecure-G2-aia.verisign.com/SVRSecu
+03c0: reG2.cer0...*.H..............!.....,..<..J*`+.+.......K..h..f.9.
+0400: sS..n.p.\..t{c..x.....DB..(.$.v/g..r/.p.c.......kM.4.)....[..G..
+0440: D......x.M...bN....A.g.*(../L.....[.....Y.pj.8.....R....;...E...
+0480: ..M6L.P....D.....|..j.<W&KR..1o....[.............q.z....\?IF
+04c0: .Eva.?.B....Y..........P.yp..00..,0..........nO....i..g....X.0.
+0500: ..*.H........0..1.0...U....US1.0...U....VeriSign, Inc.1<0:..U...
+0540: 3Class 3 Public Primary Certification Authority - G21:08..U...1(
+0580: c) 1998 VeriSign, Inc. - For authorized use only1.0...U....VeriS
+05c0: ign Trust Network0...090325000000Z..190324235959Z0..1.0...U....U
+0600: S1.0...U....VeriSign, Inc.1.0...U....VeriSign Trust Network1;09.
+0640: .U...2Terms of use at https://www.verisign.com/rpa (c)091/0-..U.
+0680: ..&VeriSign Class 3 Secure Server CA - G20.."0...*.H............
+06c0: .0.........V.W;7(.@c....t...j..qW/..4......7$...CE......J..>.N..
+0700: IPE7@.t..QUa.`....../.!.E.....G. (..h...\...Y..bV\MI.&..TQ:/J..
+0740: ...r...h<..9z........ab.....).q^b.C..1.q..N&.Q..di....}.{a...|.\
+0780: ..{._+F.......[......[...x.f...^...6...{.}.0z....Q+ .....N.g...+
+07c0: ....T...)..........0...04..+........(0&0$..+.....0...http://ocsp
+0800: .verisign.com0...U.......0.......0p..U. .i0g0e..`.H...E....0V0(.
+0840: .+.........https://www.verisign.com/cps0*..+.......0...https://w
+0880: ww.verisign.com/rpa04..U...-0+0).'.%.#http://crl.verisign.com/pc
+08c0: a3-g2.crl0...U...........0m..+........a0_.].[0Y0W0U..image/gif0!
+0900: 0.0...+..............k...j.H.,{..0%.#http://logo.verisign.com/vs
+0940: logo.gif0)..U..."0 ..0.1.0...U....Class3CA2048-1-520...U........
+0980: ....A..Je.H...W-}G0....U.#...0........0..1.0...U....US1.0...U...
+09c0: .VeriSign, Inc.1<0:..U...3Class 3 Public Primary Certification A
+0a00: uthority - G21:08..U...1(c) 1998 VeriSign, Inc. - For authorized
+0a40:  use only1.0...U....VeriSign Trust Network..}........yg...4.0...
+0a80: *.H............ct/=S./..&.f....A'.......8V:...9. u..l-g.).!...c
+0ac0: K..'c.....$....=..oT.......|..^b.....B....-.:#`....n.....<^....5
+0b00: ..#$.........._...0...0..k..}........yg...4.0...*.H........0..1.
+0b40: 0...U....US1.0...U....VeriSign, Inc.1<0:..U...3Class 3 Public Pr
+0b80: imary Certification Authority - G21:08..U...1(c) 1998 VeriSign, 
+0bc0: Inc. - For authorized use only1.0...U....VeriSign Trust Network0
+0c00: ...980518000000Z..280801235959Z0..1.0...U....US1.0...U....VeriSi
+0c40: gn, Inc.1<0:..U...3Class 3 Public Primary Certification Authorit
+0c80: y - G21:08..U...1(c) 1998 VeriSign, Inc. - For authorized use on
+0cc0: ly1.0...U....VeriSign Trust Network0..0...*.H............0......
+0d00: .^..]\i....jL..Y.0... FmG?.. ..m........;...%....c.|c..G..[3.d@.
+0d40: h...d.Ew..n..)<P.4.x...mC...EW^~........7T0o..G23..W.dia.....O\g
+0d80: .....0...*.H............QM..\.......9x.M.gpp...Z..SMTm+..]@.d...
+0dc0: .Va._....a6.,'<.)...dt..s..H..a.......@.;...Ds*..i..q..9.q...o.q
+0e00: ...YW&y.....30(..X...i..
+== Info: SSLv3, TLS handshake, Request CERT (13):
+<= Recv SSL data, 643 bytes (0x283)
+0000: ..........w..0..1.0...U....US1.0...U....California1.0...U....Sa
+0040: n Jose1.0...U....PayPal, Inc.1.0...U....sandbox_certs1.0...U....
+0080: sandbox_camerchapi1.0...*.H........re@paypal.com..0..1.0...U....
+00c0: US1.0...U....California1.0...U....San Jose1.0...U....PayPal, Inc
+0100: .1.0...U....stage1_certs1.0...U....stage1_camerchapi1.0...*.H...
+0140: .....re@paypal.com..0..1.0...U....US1.0...U....CA1.0...U....San 
+0180: Jose1.0...U....PayPal Inc.1,0*..U...#Mobile Client Certificate A
+01c0: uthority1!0...U....PayPal Sandbox Client CA1301..*.H.......$DL-P
+0200: P-ApplicationSecurity@paypal.com.a0_1.0,..U...%gtorel_1310486522
+0240: _per_api1.paypal.com1.0...U....Napoli1.0...U....Napoli1.0...U...
+0280: .IT
+== Info: SSLv3, TLS handshake, Server finished (14):
+<= Recv SSL data, 4 bytes (0x4)
+0000: ....
+== Info: SSLv3, TLS handshake, CERT (11):
+=> Send SSL data, 7 bytes (0x7)
+0000: .......
+== Info: SSLv3, TLS handshake, Client key exchange (16):
+=> Send SSL data, 134 bytes (0x86)
+0000: ......-..7..e.......9o.`.,x....Q..i...d6..!.T......]...U.......
+0040: .J....Us..g.44..T..n.=.A..'.%...NE......+..-:v.T..3.......Mw.Z.:
+0080: Q.B...
+== Info: SSLv3, TLS change cipher, Client hello (1):
+=> Send SSL data, 1 bytes (0x1)
+0000: .
+== Info: SSLv3, TLS handshake, Finished (20):
+=> Send SSL data, 16 bytes (0x10)
+0000: ....^..g9....B*.
+== Info: SSLv3, TLS change cipher, Client hello (1):
+<= Recv SSL data, 1 bytes (0x1)
+0000: .
+== Info: SSLv3, TLS handshake, Finished (20):
+<= Recv SSL data, 16 bytes (0x10)
+0000: ....c..........>
+== Info: SSL connection using DES-CBC3-SHA
+== Info: Server certificate:
+== Info: 	 subject: C=US; ST=California; L=San Jose; O=PayPal, Inc.; OU=PayPal Production; CN=api.sandbox.paypal.com
+== Info: 	 start date: 2012-09-11 00:00:00 GMT
+== Info: 	 expire date: 2013-09-17 23:59:59 GMT
+== Info: 	 subjectAltName: api.sandbox.paypal.com matched
+== Info: 	 issuer: C=US; O=VeriSign, Inc.; OU=VeriSign Trust Network; OU=Terms of use at https://www.verisign.com/rpa (c)09; CN=VeriSign Class 3 Secure Server CA - G2
+== Info: 	 SSL certificate verify ok.
+== Info: STATE: PROTOCONNECT => DO handle 0x800575b8; line 1164 (connection #0) 
+== Info: Server auth using Basic with user 'EOJ2S-Z6OoN_le_KS1d75wsZ6y0SFdVsY9183IvxFyZp'
+=> Send header, 351 bytes (0x15f)
+0000: POST /v1/oauth2/token HTTP/1.1
+0020: Authorization: Basic RU9KMlMtWjZPb05fbGVfS1MxZDc1d3NaNnkwU0ZkVnN
+0060: ZOTE4M0l2eEZ5WnA6RUNsdXNNRVVrOGU5aWhJN1pkVkxGNWNaNnkwU0ZkVnNZOTE
+00a0: 4M0l2eEZ5WnA=
+00af: User-Agent: curl/7.29.0
+00c8: Host: api.sandbox.paypal.com
+00e6: Accept: application/json
+0100: Accept-Language: en_US
+0118: Content-Length: 29
+012c: Content-Type: application/x-www-form-urlencoded
+015d: 
+=> Send data, 29 bytes (0x1d)
+0000: grant_type=client_credentials
+== Info: upload completely sent off: 29 out of 29 bytes
+== Info: STATE: DO => DO_DONE handle 0x800575b8; line 1236 (connection #0) 
+== Info: STATE: DO_DONE => WAITPERFORM handle 0x800575b8; line 1352 (connection #0) 
+== Info: STATE: WAITPERFORM => PERFORM handle 0x800575b8; line 1363 (connection #0) 
+== Info: HTTP 1.1 or later with persistent connection, pipelining supported
+<= Recv header, 17 bytes (0x11)
+0000: HTTP/1.1 200 OK
+<= Recv header, 27 bytes (0x1b)
+0000: Server: Apache-Coyote/1.1
+<= Recv header, 37 bytes (0x25)
+0000: Date: Wed, 29 May 2013 21:31:23 GMT
+<= Recv header, 32 bytes (0x20)
+0000: Content-Type: application/json
+<= Recv header, 28 bytes (0x1c)
+0000: Transfer-Encoding: chunked
+<= Recv header, 2 bytes (0x2)
+0000: 
+<= Recv data, 343 bytes (0x157)
+0000: 150
+0005: {"scope":"https://api.paypal.com/v1/payments/.* https://api.payp
+0045: al.com/v1/vault/credit-card https://api.paypal.com/v1/vault/cred
+0085: it-card/.*","access_token":"ODUArBP9GUuznKXLghkheIt9eGZTv0ypYayQ
+00c5: j9pPNmU","token_type":"Bearer","app_id":"APP-8KK24973T6066201W",
+0105: "expires_in":28800,"authn_schemes":["email_password","remember_m
+0145: e","phone_pin"]}
+<= Recv data, 5 bytes (0x5)
+0000: 0
+0003: 
+== Info: STATE: PERFORM => DONE handle 0x800575b8; line 1533 (connection #0) 
+== Info: Connection #0 to host api.sandbox.paypal.com left intact

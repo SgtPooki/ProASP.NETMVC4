@@ -28,6 +28,11 @@ namespace SportsStore.Domain.Concrete
     {
         private EmailSettings emailSettings;
 
+        //status variables;
+        public string StatusText {get;set;}
+        public bool IsDone {get;set;}
+        public bool HaveToken {get;set;}
+
         public EmailOrderProcessor(EmailSettings settings)
         {
             this.emailSettings = settings;
